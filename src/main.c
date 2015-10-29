@@ -20,8 +20,8 @@ static void update_time(){
   static char time_format[5];
   static char time_buffer[] = "00:00"; // HH:MM
   static char dual_time_buffer[] = "00:00";  // HH:MM
-  static char day_buffer[] = "wednesday"; // set to max, longest day name of the week.
-  static char date_buffer[] = "00/00/00";  // dd/mm/yyyy
+  static char day_buffer[] = "donderdag"; // set to max, longest day name of the week.
+  static char date_buffer[] = "0000-00-00";  // yy-mm-dd
     
   // time format
   if(clock_is_24h_style() == true){
@@ -30,6 +30,9 @@ static void update_time(){
     strcpy(time_format, "%I:%M"); // 12 hour format
   }
   
+  // set locale
+  setlocale(LC_TIME, "NL_nl");
+  
   // get time
   strftime(time_buffer, sizeof(time_buffer), time_format, tick_time);
   
@@ -37,7 +40,7 @@ static void update_time(){
   strftime(day_buffer, sizeof(day_buffer), "%A", tick_time);
   
   //get date
-  strftime(date_buffer, sizeof(date_buffer), "%d/%m/%y", tick_time);
+  strftime(date_buffer, sizeof(date_buffer), "%Y-%m-%d", tick_time);
   
   // populate layers
   text_layer_set_text(s_time_layer, time_buffer);

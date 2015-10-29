@@ -1,30 +1,21 @@
 {
-    "appKeys": {
-        "KEY_LOCAL_DUALZONE_OFFSET": 0,
-        "KEY_LOCAL_TIMEZONE_OFFSET": 0
-    },
+    "appKeys": {},
     "capabilities": [
+        "location",
         "configurable"
     ],
-    "companyName": "utopianmonk",
-    "longName": "DualTime",
+    "companyName": "jeroen.knoops@gmail.com",
+    "longName": "DualTime Dutch",
     "projectType": "native",
     "resources": {
-        "media": [
-            {
-                "file": "images/dt.png",
-                "menuIcon": true,
-                "name": "IMAGE_MENU_ICON",
-                "type": "png"
-            }
-        ]
+        "media": []
     },
     "sdkVersion": "2",
-    "shortName": "DualTime",
-    "uuid": "2c876a93-96ce-4d95-945a-d59a548189f6",
+    "shortName": "DualTime Dutch",
+    "uuid": "2d3346fb-3882-4da1-a032-f939b34283b4",
     "versionCode": 1,
     "versionLabel": "1.0",
     "watchapp": {
-        "watchface": true
+        "watchface": false
     }
 }
